@@ -19,17 +19,24 @@ readSuspension <- read.csv(file = "Suspension_coil.csv", check.names = F, string
 
 # Create a total_summary dataframe using the summarize() function to get the mean, median, variance, and standard deviation of the suspension coil’s PSI column.
 total_summary <- readSuspension %>% summarize(Mean = mean(PSI), Median = (PSI), Variance = var(PSI), SD = sd(PSI)) 
+
 View(total_summary)
+
 # Create a lot_summary dataframe using the group_by() and the summarize() functions to group each manufacturing lot.
 lot_summary <- readSuspension %>% group_by(Manufacturing_Lot) %>% summarize(Mean = mean(PSI), Median = (PSI), Variance = var(PSI), SD = sd(PSI))
+
 View(lot_summary)
+
 # Deliverable 3 
 
 # Perform t.test() to determine if the PSI across ALL lots is statistically different from the pop. mean of 1,500 PSI.
 t.test(readSuspension$PSI, mu = 1500)
+
 # Perform t-test() on Lot 1.
 t.test(subset(readSuspension, Manufacturing_Lot == "Lot1")$PSI, mu = 1500)
+
 # Perform t-test() on Lot 2.
 t.test(subset(readSuspension, Manufacturing_Lot == "Lot2")$PSI, mu = 1500)
+
 # Perform t-test() on Lot 3.
 t.test(subset(readSuspension, Manufacturing_Lot == "Lot3")$PSI, mu = 1500)
