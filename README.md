@@ -3,11 +3,13 @@
 ## Linear Regression to Predict MPG
 - Which variables/coefficients provided a non-random amount of variance to the mpg values in the dataset?
 
-  The vehicle weight, spoiler_angle, and the AWD provide a non-random amount of variance to the mpg values. The two variables that had the most amount of random variance are ground_clearance and vehicle_length.
+  The vehicle_length and ground_clearance provide a non-random amount of variance to the mpg values. The three variables that have random variance are spoiler_angle, AWD, and vehicle_weight.
+  
+  ![image](https://github.com/CharlesBootCamp/MechaCar_Statistical_Analysis/blob/main/MechaCar1.png)
 
 - Is the slope of the linear model considered to be zero? Why or why not?
 
-  Our slope is not zero just be looking at the p-value, which is less than 0.05, coming up as 5.35e-11.
+  Our slope is not zero by looking at the p-value, which while less than 0.05, coming up as 5.35e-11.
 
 - Does this linear model predict mpg of MechaCar prototypes effectively? Why or why not?
 
@@ -20,8 +22,10 @@
 
 ## T-Tests on Suspension Coils
 
-  The Lot 3 95 percent confidence interval is the lowest one of all 3 lots, the only one with a negative t, and having a median lower that 1,500.
+  The Lot 3 percent confidence interval, 95, is the lowest one of all 3 lots, the only one with a negative t, and having a median lower that 1,500.
   All t-tests can be seen below:
+  
+  ![image](https://github.com/CharlesBootCamp/MechaCar_Statistical_Analysis/blob/main/MechaCar2.png)
 
 ## Study Design: MechaCar vs Competition
 
