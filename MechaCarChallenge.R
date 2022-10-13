@@ -4,7 +4,7 @@
 library(dplyr)
 
 # Import and read in the MechaCar_mpg.csv file as a dataframe.
-readMechaCar <- read.csv(file = "C:\\Users\\celas\\Downloads\\MechaCar_mpg.csv", check.names = F, stringsAsFactors = F)
+readMechaCar <- read.csv(file = "MechaCar_mpg.csv", check.names = F, stringsAsFactors = F)
 
 # Perform linear regression using the lm() function.
 lm(mpg ~ vehicle_length + vehicle_weight + spoiler_angle + ground_clearance + AWD,data = readMechaCar)
@@ -15,7 +15,7 @@ summary(lm(mpg ~ vehicle_length + vehicle_weight + spoiler_angle + ground_cleara
 # Deliverable 2
 
 # Import and read in the Suspension_Coil.csv file as a table.
-readSuspension <- read.csv(file = "C:\\Users\\celas\\Downloads\\Suspension_coil.csv", check.names = F, stringsAsFactors = F)
+readSuspension <- read.csv(file = "Suspension_coil.csv", check.names = F, stringsAsFactors = F)
 
 # Create a total_summary dataframe using the summarize() function to get the mean, median, variance, and standard deviation of the suspension coil’s PSI column.
 total_summary <- readSuspension %>% summarize(Mean = mean(PSI), Median = (PSI), Variance = var(PSI), SD = sd(PSI)) 
